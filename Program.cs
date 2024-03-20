@@ -142,6 +142,7 @@ namespace Puzzle
 				while (!Finished)
 				{
 					DisplayPuzzle();
+					Console.WriteLine("Number of symbols left: " + SymbolsLeft);
 					Console.WriteLine("Current score: " + Score);
 					bool Valid = false;
 					int Row = -1;
