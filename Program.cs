@@ -151,7 +151,11 @@ namespace Puzzle
 						try
 						{
 							Row = Convert.ToInt32(Console.ReadLine());
-							Valid = true;
+							if (Row <= GridSize && Row > 0)
+							{
+								Valid = true;
+							}
+							else Console.WriteLine("Invalid Row");
 						}
 						catch
 						{
@@ -165,7 +169,11 @@ namespace Puzzle
 						try
 						{
 							Column = Convert.ToInt32(Console.ReadLine());
-							Valid = true;
+							if (Column <= GridSize && Column > 0)
+							{
+								Valid = true;
+							}
+							else Console.WriteLine("Invalid Column");
 						}
 						catch
 						{
