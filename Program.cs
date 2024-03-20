@@ -20,8 +20,16 @@ namespace Puzzle
 			int Score;
 			while (Again == "y")
 			{
-				Console.Write("Press Enter to start a standard puzzle or enter name of file to load: ");
-				string Filename = Console.ReadLine();
+				string Filename = null;
+				while (!(File.Exists(Filename) || Filename == ""))
+				{
+					Console.Write("Press Enter to start a standard puzzle or enter name of file to load: ");
+					Filename = Console.ReadLine();
+					if (!(File.Exists(Filename)||Filename == ""))
+					{
+						Console.WriteLine("Invalid File name, please try again.");
+					}
+				}
 				Puzzle MyPuzzle;
 				if (Filename.Length > 0)
 				{
