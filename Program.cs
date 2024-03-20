@@ -196,6 +196,10 @@ namespace Puzzle
 
 			private Cell GetCell(int Row, int Column)
 			{
+				if (Row > GridSize || Column > GridSize)
+				{
+					return new BlockedCell();
+				}
 				return Grid[(GridSize - Row) * GridSize + Column - 1];
 			}
 
