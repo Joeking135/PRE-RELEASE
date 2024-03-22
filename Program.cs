@@ -3,6 +3,8 @@
 //written by the AQA Programmer Team
 //developed in the Visual Studio Community Edition programming environment
 
+//CODING TASK 4
+
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -171,6 +173,14 @@ namespace Puzzle
 						{
 						}
 					}
+					//Inserted Code.
+					if (GetCell(Row, Column).GetSymbol() != "-")
+					{
+						Console.WriteLine("This cell is occupied.");
+						continue;
+					}
+					//End of Insert.
+
 					string Symbol = GetSymbolFromUser();
 					SymbolsLeft -= 1;
 					Cell CurrentCell = GetCell(Row, Column);
