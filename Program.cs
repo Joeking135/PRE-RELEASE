@@ -21,7 +21,7 @@ namespace Puzzle
 			while (Again == "y")
 			{
 				string Filename = null;
-				while (!(File.Exists(Filename) || Filename == ""))
+				while (!(File.Exists(Filename + ".txt") || Filename == ""))
 				{
 					Console.Write("Press Enter to start a standard puzzle or enter name of file to load: ");
 					Filename = Console.ReadLine();
